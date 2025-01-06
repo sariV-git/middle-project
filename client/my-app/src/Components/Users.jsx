@@ -46,7 +46,7 @@ const Users=(props)=>{
     return(
     <>
  {
-                usersData.map(user => (
+                usersData.sort((a,b)=>a.name.localeCompare(b.name)).map(user => (
                     <div>
                         <User user={user} setUsersData={setUsersData}/>
                     </div>

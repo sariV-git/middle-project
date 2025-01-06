@@ -47,7 +47,7 @@ const Todos = () => {
     return (
         <>
             {
-                todosData.map(task => (
+                todosData.sort((a,b)=>a.title.localeCompare(b.title)).map(task => (
                     <div>
                         <Todo task={task} setTodosData={setTodosData}/>
                     </div>

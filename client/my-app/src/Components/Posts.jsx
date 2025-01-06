@@ -41,7 +41,7 @@ const Posts=()=>{
     return(
     <>
    {
-                postsData.map(post => (
+                postsData.sort((a,b)=>a.title.localeCompare(b.title)).map(post => (
                     <div>
                         <Post post={post} setPostsData={setPostsData}/>
                     </div>
